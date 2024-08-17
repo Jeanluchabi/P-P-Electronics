@@ -3,245 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P&P Electronics</title>
+    <title>P&P Electronics - Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            height: 100%;
+        }
+        .content-wrap {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+        }
+        .footer {
+            margin-top: auto;
+        }
+        .search-bar {
+            margin-top: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="bg-primary text-white p-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="#" class="navbar-brand">P&P Electronics</a>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a href="#" class="nav-link text-white">Dashboard</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link text-white">About Us</a></li>
-                    <li class="nav-item"><a href="#products" class="nav-link text-white">Our Products</a></li>
-                    <li class="nav-item"><a href="#orders" class="nav-link text-white">My Orders</a></li>
-                    <li class="nav-item"><a href="#account" class="nav-link text-white">Account</a></li>
-                </ul>
-            </nav>
-            <div class="cart">
-                <a href="#cart" class="text-white position-relative">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        0
-                    </span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Search Section -->
-        <section class="search-bar bg-light p-4">
-            <div class="container">
-                <input type="text" id="search-input" class="form-control" placeholder="Search for products...">
-            </div>
-        </section>
-
-        <!-- Products Section -->
-        <section id="products" class="products-section py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Our Products</h2>
-                <div id="product-grid" class="row row-cols-1 row-cols-md-3 g-4">
-                    <!-- Product Cards -->
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/iphone_15_pro.jpg" alt="Apple iPhone 15 Pro Max" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Apple iPhone 15 Pro Max</h5>
-                                <p>$1,299.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Apple iPhone 15 Pro Max">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/samsung-galaxy-s24.jpg" alt="Samsung Galaxy S24 Ultra" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Samsung Galaxy S24 Ultra</h5>
-                                <p>$1,199.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Samsung Galaxy S24 Ultra">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/Google-Pixel-9.jpg" alt="Google Pixel 9 Pro XL" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Google Pixel 9 Pro XL</h5>
-                                <p>$1,099.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Google Pixel 9 Pro XL">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/iphone-14-promax.jpg" alt="Apple iPhone 14 Pro Max" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Apple iPhone 14 Pro Max</h5>
-                                <p>$1,099.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Apple iPhone 14 Pro Max">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/iphone15pro.jpg" alt="Apple iPhone 15 Pro" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Apple iPhone 15 Pro</h5>
-                                <p>$1,199.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Apple iPhone 15 Pro">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/google-pixel-9-pro-fold.jpg" alt="Google Pixel 9 Pro" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Google Pixel 9 Pro</h5>
-                                <p>$999.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Google Pixel 9 Pro">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/modern-guitar.jpg" alt="Google Pixel 9 Pro" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Modern Account Guitar</h5>
-                                <p>$999.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Google Pixel 9 Pro">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/jbl.jpg" alt="Google Pixel 9 Pro" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>JBL Speakers</h5>
-                                <p>$999.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Google Pixel 9 Pro">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/watch-series-9-with-dual-straps.jpg" alt="Google Pixel 9 Pro" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Watch series 9 with dual straps</h5>
-                                <p>$999.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Google Pixel 9 Pro">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
+    <div class="content-wrap">
+        <!-- Header -->
+        <header class="bg-primary text-white p-3">
+            <div class="container d-flex justify-content-between align-items-center">
+                <a href="main.html" class="navbar-brand">P&P Electronics</a>
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="index.html" class="nav-link text-white">Dashboard</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link text-white">About Us</a></li>
+                        <li class="nav-item"><a href="products.html" class="nav-link text-white">Our Products</a></li>
+                        <li class="nav-item"><a href="orders.html" class="nav-link text-white">My Orders</a></li>
+                        <li class="nav-item"><a href="account.html" class="nav-link text-white">Account</a></li>
+                    </ul>
+                </nav>
+                <div class="cart">
+                    <a href="#cart" class="text-white position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </a>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <!-- Product Description Modal -->
-        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Product details will be dynamically inserted here -->
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Order Now</button>
-                        <button type="button" class="btn btn-primary">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Main Content -->
+        <main class="content">
+            <section class="dashboard-section py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4">Welcome to P&P Electronics Dashboard</h2>
+                    <p class="text-center">Use the navigation to explore different sections of the site.</p>
 
-        <!-- My Orders Section -->
-        <section id="orders" class="orders-section py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-4">My Orders</h2>
-                <div id="orders-list" class="list-group">
-                    <!-- Orders will be dynamically added here -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Account Section -->
-        <section id="account" class="account-section py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Create Account / Sign In</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>Create Account</h3>
-                        <form id="account-form" class="row g-3">
-                            <div class="col-md-6">
-                                <label for="first-name" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="first-name" required>
+                    <!-- Featured Products Section -->
+                    <div class="featured-products mt-5">
+                        <h3 class="text-center mb-4">Featured Products</h3>
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/iphone_15_pro.jpg" class="card-img-top" alt="Apple iPhone 15 Pro Max">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Apple iPhone 15 Pro Max</h5>
+                                        <p class="card-text">$1,299.00</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <label for="last-name" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="last-name" required>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/samsung-galaxy-s24.jpg" class="card-img-top" alt="Samsung Galaxy S24 Ultra">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Samsung Galaxy S24 Ultra</h5>
+                                        <p class="card-text">$1,199.00</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="images/Google-Pixel-9.jpg" class="card-img-top" alt="Google Pixel 9 Pro XL">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Google Pixel 9 Pro XL</h5>
+                                        <p class="card-text">$1,099.00</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" required>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Create Account</button>
-                            </div>
-                        </form>
-                        <div class="text-center mt-3">
-                            <button id="google-signin-btn" class="btn btn-danger"><i class="fab fa-google"></i> Sign in with Google</button>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <h3>Sign In</h3>
-                        <form id="signin-form" class="row g-3">
-                            <div class="col-12">
-                                <label for="signin-email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="signin-email" required>
+
+                    <!-- Latest News Section -->
+                    <div class="latest-news mt-5">
+                        <h3 class="text-center mb-4">Latest News</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">Apple releases new iPhone 15 Pro Max with enhanced features.</li>
+                            <li class="list-group-item">Samsung unveils Galaxy S24 Ultra with advanced camera technology.</li>
+                            <li class="list-group-item">Google launches Pixel 9 Pro XL, pushing the boundaries of AI integration.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links Section -->
+                    <div class="quick-links mt-5">
+                        <h3 class="text-center mb-4">Quick Links</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="products.html" class="btn btn-primary w-100">View All Products</a>
                             </div>
-                            <div class="col-12">
-                                <label for="signin-password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="signin-password" required>
+                            <div class="col-md-4">
+                                <a href="orders.html" class="btn btn-primary w-100">Track Your Orders</a>
                             </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Sign In</button>
+                            <div class="col-md-4">
+                                <a href="account.html" class="btn btn-primary w-100">Manage Your Account</a>
                             </div>
-                        </form>
+                        </div>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="search-bar mt-5">
+                        <input type="text" class="form-control" placeholder="Search our products...">
+                        <button class="btn btn-primary mt-3 w-100">Search</button>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2024 P&P Electronics. All Rights Reserved.</p>
-            <p>Follow us on 
-                <a href="#" class="text-white">Facebook</a>, 
-                <a href="#" class="text-white">Twitter</a>, 
-                <a href="#" class="text-white">Instagram</a>
-            </p>
-            <p><a href="#faq" class="text-white">FAQ</a> | <a href="#contact" class="text-white">Contact Us</a></p>
-        </div>
-    </footer>
+        <!-- Footer -->
+        <footer class="footer bg-dark text-white py-4">
+            <div class="container text-center">
+                <p>&copy; 2024 P&P Electronics. All Rights Reserved.</p>
+                <p>Follow us on 
+                    <a href="#" class="text-white">Facebook</a>, 
+                    <a href="#" class="text-white">Twitter</a>, 
+                    <a href="#" class="text-white">Instagram</a>
+                </p>
+                <p><a href="#faq" class="text-white">FAQ</a> | <a href="#contact" class="text-white">Contact Us</a></p>
+            </div>
+        </footer>
+    </div>
 
     <!-- Bootstrap JS and Font Awesome -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
-

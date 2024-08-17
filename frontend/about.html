@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P&P Electronics - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .social-media-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 1.5rem;
+        }
+
+        .social-media-icons a {
+            font-size: 2rem;
+            color: #007bff;
+            transition: color 0.3s;
+        }
+
+        .social-media-icons a:hover {
+            color: #0056b3;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Header from main.html -->
+    <header class="bg-primary text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="main.html" class="navbar-brand">P&P Electronics</a>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link text-white">Dashboard</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link text-white">About Us</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link text-white">Our Products</a></li>
+                    <li class="nav-item"><a href="orders.html" class="nav-link text-white">My Orders</a></li>
+                    <li class="nav-item"><a href="account.html" class="nav-link text-white">Account</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <a href="#cart" class="text-white position-relative">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Us Content -->
+    <main>
+        <section class="about-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">About Us</h2>
+                <p class="text-center">
+                    P&P Electronics is committed to providing high-quality electronic products to our customers. Our mission is to offer a wide range of electronics, from the latest smartphones to top-of-the-line home entertainment systems. We pride ourselves on our customer service and strive to exceed customer expectations by offering the best products at competitive prices. Our team is passionate about technology and works tirelessly to bring the latest innovations to our valued customers. Join us in our journey to bring the future of electronics to your fingertips.
+                </p>
+                <div class="social-media-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer from main.html -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 P&P Electronics. All Rights Reserved.</p>
+            <p><a href="#faq" class="text-white">FAQ</a> | <a href="#contact" class="text-white">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Font Awesome -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
