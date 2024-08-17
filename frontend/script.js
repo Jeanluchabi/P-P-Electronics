@@ -22,6 +22,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const cartCount = document.getElementById('cart-count');
+    
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                let count = parseInt(cartCount.textContent) + 1;
+                cartCount.textContent = count;
+                alert(`${this.dataset.product} added to cart!`);
+            });
+        });
+    });
+    
+
     // Example form submission for account creation and sign-in
     document.getElementById('account-form').addEventListener('submit', function (event) {
         event.preventDefault();
