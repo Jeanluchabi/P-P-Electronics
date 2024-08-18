@@ -1,7 +1,19 @@
 from flask import Flask, render_template, request, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+# Database setup
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///yourdatabase.db'
+db = SQLAlchemy(app)
+
+# Define the Product model
+class Product(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), unique=True, nullable=False)
+    price = db.Column(db.Float, nullable=False)
+
+# Routes
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -12,7 +24,9 @@ def about():
 
 @app.route('/products')
 def products():
-    return render_template('products.html')
+    # Fetch all products from the database
+    all_products = Product.query.all()
+    return render_template('products.html', products=all_products)
 
 @app.route('/orders')
 def orders():
@@ -29,3 +43,8 @@ def search():
     # For now, just print the query to the console
     print(f"User searched for: {query}")
     return redirect(url_for('index'))  # Redirect to homepage after search
+
+if __name__ == '__main__':
+    db.create_all()  # Create database tables if they don't exist
+    app.run(debug=True)
+
