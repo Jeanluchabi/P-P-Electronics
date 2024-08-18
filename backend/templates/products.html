@@ -70,66 +70,19 @@
                 <h2 class="text-center mb-4">Our Products</h2>
                 <div id="product-grid" class="row row-cols-1 row-cols-md-3 g-4">
                     <!-- Product Cards -->
+                    {% for product in products %}
                     <div class="col">
                         <div class="product-card">
-                            <img src="images/iphone_15_pro.jpg" alt="Apple iPhone 15 Pro Max" class="img-fluid">
+                            <!-- Replace with dynamic product image source if available -->
+                            <img src="images/default-product.jpg" alt="{{ product.name }}" class="img-fluid">
                             <div class="product-card-body">
-                                <h5>Apple iPhone 15 Pro Max</h5>
-                                <p>$1,299.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Apple iPhone 15 Pro Max">Learn More</a>
+                                <h5>{{ product.name }}</h5>
+                                <p>${{ product.price }}</p>
+                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="{{ product.name }}">Learn More</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/samsung-galaxy-s24.jpg" alt="Samsung Galaxy S24 Ultra" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Samsung Galaxy S24 Ultra</h5>
-                                <p>$1,199.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Samsung Galaxy S24 Ultra">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/Google-Pixel-9.jpg" alt="Google Pixel 9 Pro XL" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Google Pixel 9 Pro XL</h5>
-                                <p>$1,099.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Google Pixel 9 Pro XL">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/modern-guitar.jpg" alt="Modern Acoustic Guitar" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Modern Acoustic Guitar</h5>
-                                <p>$999.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Modern Acoustic Guitar">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/jbl.jpg" alt="JBL Speakers" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>JBL Speakers</h5>
-                                <p>$299.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="JBL Speakers">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="product-card">
-                            <img src="images/watch-series-9-with-dual-straps.jpg" alt="Watch Series 9 with Dual Straps" class="img-fluid">
-                            <div class="product-card-body">
-                                <h5>Watch Series 9 with Dual Straps</h5>
-                                <p>$499.00</p>
-                                <a href="#" class="learn-more" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Watch Series 9 with Dual Straps">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
@@ -172,3 +125,4 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
+
