@@ -46,5 +46,17 @@ def search():
 
 if __name__ == '__main__':
     db.create_all()  # Create database tables if they don't exist
+
+    # Add sample products if the database is empty
+    if Product.query.count() == 0:
+        sample_products = [
+            Product(name="Apple iPhone 15 Pro Max", price=1299.00),
+            Product(name="Samsung Galaxy S24 Ultra", price=1199.00),
+            Product(name="Google Pixel 9 Pro XL", price=1099.00)
+        ]
+        db.session.bulk_save_objects(sample_products)
+        db.session.commit()
+        print("Sample products added to the database.")
+
     app.run(debug=True)
 
