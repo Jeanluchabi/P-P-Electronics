@@ -22,5 +22,10 @@ def orders():
 def account():
     return render_template('account.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.route('/search', methods=['POST'])
+def search():
+    query = request.form.get('query')
+    # Handle the search logic here
+    # For now, just print the query to the console
+    print(f"User searched for: {query}")
+    return redirect(url_for('index'))  # Redirect to homepage after search
